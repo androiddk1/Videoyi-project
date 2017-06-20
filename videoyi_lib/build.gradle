@@ -35,20 +35,20 @@ dependencies {
 /**---------------以下开始是将Android Library上传到jcenter的相关配置----------**/
 //添加打包编译的lint通过问题，一般情况下，运行不崩溃的情况下，在打包的时候，设置检查级别为最低级，即abortOnError = false
 
-apply plugin: 'com.novoda.bintray-release'//添加
-publish {
-    repoName = 'maven'//远程仓库名字,不指明，默认是上传到maven
-    userOrg = 'dengkai'//bintray.com的用户名
-    groupId = 'com.moviebook.sdk'//jcenter上的路径,被引用的路径前缀
-    artifactId = 'videoyi-lib'//binatray上面创建的项目（package）名称
-    publishVersion = '1.0.0'//版本号
-    desc = '植入易+易植贴'
-    website = ''//项目主页
-    //被引用路径规则：groupId:artifactId:publishVersion。上面的例子为：比如:com.dengkai.sdk:my-lib:1.0.2
-}
-tasks.withType(Javadoc) {//防止编码问题
-    options.addStringOption('Xdoclint:none', '-quiet')
-    options.addStringOption('encoding', 'UTF-8')
-    options.addStringOption('charSet', 'UTF-8')
-}
+//apply plugin: 'com.novoda.bintray-release'//添加
+//publish {
+//    repoName = 'maven'//远程仓库名字,不指明，默认是上传到maven
+//    userOrg = 'dengkai'//bintray.com的用户名
+//    groupId = 'com.moviebook.sdk'//jcenter上的路径,被引用的路径前缀
+//    artifactId = 'videoyi-lib'//binatray上面创建的项目（package）名称
+//    publishVersion = '1.0.0'//版本号
+//    desc = '植入易+易植贴'
+//    website = ''//项目主页
+//    //被引用路径规则：groupId:artifactId:publishVersion。上面的例子为：比如:com.dengkai.sdk:my-lib:1.0.2
+//}
+//tasks.withType(Javadoc) {//防止编码问题
+//    options.addStringOption('Xdoclint:none', '-quiet')
+//    options.addStringOption('encoding', 'UTF-8')
+//    options.addStringOption('charSet', 'UTF-8')
+//}
 /**---------------以上开始是将Android Library上传到jcenter的相关配置----------**/
